@@ -1,4 +1,6 @@
-// var availHeight = window.innerHeight;
+// jQuery code
+// console.log('I\'m jQuery');
+;// var availHeight = window.innerHeight;
 // var folds = document.querySelectorAll('.header, section');
 // var applyAvailHeight = function (el) {
 //   el.style.minHeight = availHeight + 'px';

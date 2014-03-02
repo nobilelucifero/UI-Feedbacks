@@ -1,2 +1,2 @@
 // jQuery code
-console.log('I\'m jQuery');
+// console.log('I\'m jQuery');

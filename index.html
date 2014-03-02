@@ -18,7 +18,7 @@
   <!-- CSS -->
   <link href="//fonts.googleapis.com/css?family=Roboto:300,300italic,500,500italic" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
-  <link href="css/build/global.css" rel="stylesheet" type="text/css">
+  <link href="css/_build/main.css" rel="stylesheet" type="text/css">
 
   <!-- Javascript -->
   <script>
@@ -34,26 +34,43 @@
 </head>
 <body>
 
-  <section class="section section--heading">
-    <h1>Feedbacks</h1>
+  <section class="header">
+    <aside class="toolbar project-authorship">
+      <div class="wrapper">
+        <dl class="nav--left project-authorship--box">
+          <dt class="author-badge">
+            <a href="#">@nobilelucifero</a>
+          </dt>
+        </dl>
+        <dl class="nav--right project-authorship--box">
+          <dt class="source">
+            <a href="#">View on Github</a>
+          </dt>
+        </dl>
+      </div>
+    </aside>
+    <h1 class="logo">UI Feedbacks</h1>
+    <p>
+      A bunch of feedbacks for your buttons. Might be helpful! Animate.css based. Micro UI components possibly involved.
+    </p>
   </section>
-  <section class="section section--default"></section>
-  <section class="section section--hovers"></section>
-  <section class="section section--toggles"></section>
-  <section class="section section--actions"></section>
+  <!-- <section class="section section--heading">
+    <h1>Feedbacks</h1>
+  </section> -->
+  <section class="section section--default">
+    <h2>Default feedbacks</h2>
+  </section>
+  <section class="section section--hovers">
+    <h2>Involve :hover</h2>
+  </section>
+  <section class="section section--toggles">
+    <h2>They can be toggles</h2>
+  </section>
+  <section class="section section--actions">
+    <h2>They can be actions</h2>
+  </section>
 
-  <script>
-    var availHeight = window.innerHeight;
-    var folds = document.querySelectorAll('.section');
-    var applyAvailHeight = function (el) {
-      el.style.minHieght = availHeight;
-    }
-
-    for (var i = 0, n = folds.length; i < n; i++) {
-      var el = folds[i];
-      applyAvailHeight(el);
-    }
-  </script>
+  <script src="js/_build/main.min.js"></script>
 
 </body>
 </html>
