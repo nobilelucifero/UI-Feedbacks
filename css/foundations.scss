@@ -1,10 +1,38 @@
-// Toolbar Object
-.toolbar {
-    overflow: hidden;
+// Toolbar
+%toolbar {
+    @extend %clearfix;
+    text-align: center;
 }
-.nav--left {
+
+// Toolbar Group
+%toolbar-group {
+	@extend %clearfix;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+%toolbar-group--left {
+	@extend %toolbar-group;
     float: left;
 }
-.nav--right {
+%toolbar-group--right {
+	@extend %toolbar-group;
     float: right;
+}
+%toolbar-group--center {
+	@extend %toolbar-group;
+	display: inline-block;
+}
+
+// Toolbar Item
+%toolbar-item {
+	display: block;
+	float: left;
+    margin: 0;
+    padding: 0;
+}
+
+// Toolbar Item Content
+%toolbar-item-content {
+	display: block;
 }

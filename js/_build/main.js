@@ -10,3 +10,11 @@
 //   var el = folds[i];
 //   applyAvailHeight(el);
 // }
+
+var svgs = document.querySelectorAll('.has--svg');
+
+for (var i = 0, n = svgs.length; i < n; i++) {
+  var el = svgs[i];
+  console.log('wohooo', el.src);
+  // applyAvailHeight(el);
+}

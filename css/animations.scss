@@ -1,0 +1,21 @@
+// animate.scss
+@import "libs/animate.scss";
+
+@-webkit-keyframes FXFlashSmall {
+  50% {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes FXRotate {
+  0%, 100% {
+    // -webkit-transform: rotateZ(0deg);
+    border-radius: 100%;
+  }
+  50% {
+    border-radius: 0;
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
