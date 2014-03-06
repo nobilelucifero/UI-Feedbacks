@@ -13,331 +13,338 @@ $brand-color: #2d9fc5;
 
 /* github.com/nobilelucifero/tinyrn.css */ 
 *, *:after, *:before {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300;
-    color: #333;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
 }
 
 h1, h2 {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    p & {
-        border-bottom: 1px dotted;
-    }
+  text-decoration: none;
+  color: inherit;
+  p & {
+    border-bottom: 1px dotted;
+  }
 }
 
 h1, h3 {
-    margin-bottom: 0;
-    color: $brand-color;
+  margin-bottom: 0;
+  color: $brand-color;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
-    color: #aaa;
+  font-size: 1.5rem;
+  color: #aaa;
 }
 
 h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-    margin: 24px auto;
-    margin: 1.5rem auto;
+  margin: 24px auto;
+  margin: 1.5rem auto;
 }
 h4, p {
-    font-size: 18px;
-    font-size: 1.125rem;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .wrapper {
-    @extend %clearfix;
-    margin: 0 auto;
-    max-width: 45rem;
-    padding: 0 1.5rem;
+  @extend %clearfix;
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: 0 1.5rem;
 
-    // @media only screen and (min-width: 361px) {
-    @media only screen and (min-width: 801px) {
-        padding: 0 2.5rem;
-    }
+  // @media only screen and (min-width: 361px) {
+  @media only screen and (min-width: 801px) {
+    padding: 0 2.5rem;
+  }
 }
 
 .header {
-    @extend %clearfix;
-    padding: 2.5rem 0;
-    text-align: center;
+  @extend %clearfix;
+  padding: 2.5rem 0;
+  text-align: center;
 }
 
 .section {
-    @extend %clearfix;
-    padding: 2.5rem 0;
-    text-align: center;
-    background-color: $turquoise;
+  @extend %clearfix;
+  padding: 2.5rem 0;
+  text-align: center;
+  background-color: $turquoise;
 
-    // @media only screen and (min-width: 801px) {
-    //     float: left;
-    //     width: 50%;
-    // }
+  // @media only screen and (min-width: 801px) {
+  //   float: left;
+  //   width: 50%;
+  // }
 
-    &, & h1, & h2, & p {
-        color: $white;
-    }
+  &, & h1, & h2, & p {
+    color: $white;
+  }
 }
 .section:nth-child(even) {
-    background-color: $darkTurquoise;
+  background-color: $darkTurquoise;
 }
 .section--heading {
-    // background-color: $turquoise;
+  // background-color: $turquoise;
 }
 .section--hovers {}
 .section--toggles {}
 .section--actions {}
 
 .menu {
-    @extend %toolbar;
-    position: relative;
-    top: -1.5rem;
+  @extend %toolbar;
+  position: relative;
+  top: -1.5rem;
 }
 .menu-group {
-    @extend %toolbar-group;
-    margin: 0;
+  @extend %toolbar-group;
+  margin: 0;
 }
 .menu-group--left {
-    @extend %toolbar-group--left;
+  @extend %toolbar-group--left;
 }
 .menu-group--right {
-    @extend %toolbar-group--right;
+  @extend %toolbar-group--right;
 }
 .menu-item {
-    @extend %toolbar-item;
+  @extend %toolbar-item;
 }
 .menu-item-content {
-    @extend %toolbar-item-content;
+  @extend %toolbar-item-content;
 }
 .logo-website {
-    // display: inline-block;
-    // display: inline-block;
-    // vertical-align: middle;
-    // border-bottom: 0;
-    margin-top: 0.25rem;
-    margin-right: 0.5em;
-    padding-right: 0.75em;
-    font-size: 0.875rem;
-    border-right: 1px solid #eee;
-    border-bottom: 0;
+  // display: inline-block;
+  // display: inline-block;
+  // vertical-align: middle;
+  // border-bottom: 0;
+  margin-top: 0.25rem;
+  margin-right: 0.5em;
+  padding-right: 0.75em;
+  font-size: 0.875rem;
+  border-right: 1px solid #eee;
+  border-bottom: 0;
 }
 .logo-website img {
-    display: block;
-    width: 20px;
-    height: auto;
+  display: block;
+  width: 20px;
+  height: auto;
 }
 .author-badge {
-    display: inline-block;
-    border: 0;
-    line-height: 1.875rem;
-    font-size: 0.875rem;
+  display: inline-block;
+  border: 0;
+  line-height: 1.875rem;
+  font-size: 0.875rem;
 }
 .author-avatar {
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-    margin-right: 0.25em;
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-right: 0.25em;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 100%;
 }
 .author-avatar--media {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .author-sreenname {
-    font-weight: 500;
+  font-weight: 500;
 
-    .author-badge:hover & {
-        border-bottom: 1px dotted;
-    }
+  .author-badge:hover & {
+    border-bottom: 1px dotted;
+  }
 }
 .btn-source {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    line-height: 1.875rem;
-    line-height: 1.75rem;
-    line-height: 1.8125rem;
-    padding: 0 0.75rem 0.0625rem;
-    // padding: 0 0.75rem;
-    font-size: 0.875rem;
-    // font-weight: 500;
-    border: 1px solid #aaa;
-    border-radius: 17px;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  line-height: 1.875rem;
+  line-height: 1.75rem;
+  line-height: 1.8125rem;
+  padding: 0 0.75rem 0.0625rem;
+  // padding: 0 0.75rem;
+  font-size: 0.875rem;
+  // font-weight: 500;
+  border: 1px solid #aaa;
+  border-radius: 17px;
 
-    transition: all .1s;
+  transition: all .1s;
 
-    &:after {
-        // content: '\203A';
-        // display: inline-block;
-        // position: relative;
-        // top: -0.0625rem;
-        // margin-left: 0.5em;
-    }
-    &:hover:after {
-        // content: '»';
-        -webkit-animation: FXFlashSmall 0.5s 0.2s;
-    }
-    &:hover {
-        color: $brand-color;
-        border-color: lighten($brand-color, 20%);
-        color: $white;
-        background-color: $brand-color;
-        border-color: $brand-color;
-    }
+  &:after {
+    // content: '\203A';
+    // display: inline-block;
+    // position: relative;
+    // top: -0.0625rem;
+    // margin-left: 0.5em;
+  }
+  &:hover:after {
+    // content: '»';
+    -webkit-animation: FXFlashSmall 0.5s 0.2s;
+  }
+  &:hover {
+    color: $brand-color;
+    border-color: lighten($brand-color, 20%);
+    color: $white;
+    background-color: $brand-color;
+    border-color: $brand-color;
+  }
 }
 
 .logo {
-    position: relative;
-    padding: 2.5rem 0;
+  position: relative;
+  padding: 2.5rem 0;
 
-    &:before, &:after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 5rem;
-        min-width: 2.5rem;
-        height: 1px;
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.10);
-    }
-    &:before {
-        top: -0.5rem;
-    }
-    &:after {
-        bottom: -0.75rem;
-    }
+  &:before, &:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 5rem;
+    min-width: 2.5rem;
+    height: 1px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.10);
+  }
+  &:before {
+    top: -0.5rem;
+  }
+  &:after {
+    bottom: -0.75rem;
+  }
 }
 
 .appbar {
-    @extend %toolbar;
-    margin: 0rem 0 1.5rem;
+  @extend %toolbar;
+  margin: 0rem 0 1.5rem;
 }
 .appbar-group {
-    @extend %toolbar-group;
+  @extend %toolbar-group;
 }
 .appbar-group--center {
-    @extend %toolbar-group--center;
+  @extend %toolbar-group--center;
 }
 .appbar-item {
-    @extend %toolbar-item;
-    position: relative;
-    margin: 0 0.25rem;
+  @extend %toolbar-item;
+  position: relative;
+  margin: 0 0.25rem;
 }
 .appbar-item-content {
-    @extend %toolbar-item-content;
-    // display: table;
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.25rem;
+  @extend %toolbar-item-content;
+  // display: table;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.25rem;
 }
 .appbar-item-icon {
-    display: inline-block;
-    // display: table-cell;
-    vertical-align: middle;
-    width: 1.375rem;
-    height: 1.375rem;
-    line-height: 1.375rem;
+  display: inline-block;
+  // display: table-cell;
+  vertical-align: middle;
+  width: 1.375rem;
+  height: 1.375rem;
+  line-height: 1.375rem;
 }
 
 // .appbar--hovers .appbar-group:hover .appbar-item:not(:hover) {
-//     opacity: 0.5;
+//   opacity: 0.5;
 // }
 .appbar--hovers .appbar-item {
-    transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
 .appbar--hovers .appbar-item:hover {
-    // -webkit-transform: scale3d(1.5, 1.5, 1.5);
-    // transform: scale3d(1.5, 1.5, 1.5);
-    // -webkit-transform: translateY(-20%) scale(1.5);
-    // transform: translateY(-5%) scale(1.5);
-    -webkit-transform: scale(1.5);
-    // box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
-    // box-shadow: 0 0 0 1px $white;
-    transition: all .1s;
+  // -webkit-transform: scale3d(1.5, 1.5, 1.5);
+  // transform: scale3d(1.5, 1.5, 1.5);
+  // -webkit-transform: translateY(-20%) scale(1.5);
+  // transform: translateY(-5%) scale(1.5);
+  -webkit-transform: scale(1.5);
+  // box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  // box-shadow: 0 0 0 1px $white;
+  transition: all .1s;
 }
 .appbar-item-overlay {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
 }
 .appbar-item-overlay.is--active + .appbar-item-content {
-    // transform: scale(0.5);
-    // -webkit-transform: scale(0.5) translateY(20px);
-    // -webkit-filter: blur(2px);
-    opacity: 0.25;
-    // background-color: tomato;
+  // transform: scale(0.5);
+  // -webkit-transform: scale(0.5) translateY(20px);
+  // -webkit-filter: blur(2px);
+  opacity: 0.25;
+  // background-color: tomato;
+}
+.is--toggle {
+  transition: all .1s;
+  &.is--active {
+    background-color: rgba($black, 0.25);
+    border-radius: 4px;
+  }
 }
 
 .progessbar {
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    width: 100%;
-    height: 0.625rem;
-    line-height: 0.5rem;
-    border: 1px solid rgba($black, 0.50);
-    border-radius: 0.625rem;
-    overflow: hidden;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  width: 100%;
+  height: 0.625rem;
+  line-height: 0.5rem;
+  border: 1px solid rgba($black, 0.50);
+  border-radius: 0.625rem;
+  overflow: hidden;
 }
 .progessbar-value {
-    position: absolute;
-    z-index: -1;
-    width: 25%;
-    height: 100%;
-    background-color: rgba($black, 0.5);
-    // background-color: rgba($white, 1);
+  position: absolute;
+  z-index: -1;
+  width: 25%;
+  height: 100%;
+  background-color: rgba($black, 0.5);
+  // background-color: rgba($white, 1);
 }
 
 .spinner {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    top: -1px;
-    width: 1.25rem;
-    height: 1.25rem;
-    line-height: 1.125rem;
-    // background-color: rgba($black, 0.50);
-    border: 1px solid rgba($black, 0.50);
-    border-radius: 0.625rem;
-    overflow: hidden;
-    // -webkit-animation: FXRotate 2s linear infinite;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  top: -1px;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.125rem;
+  // background-color: rgba($black, 0.50);
+  border: 1px solid rgba($black, 0.50);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  // -webkit-animation: FXRotate 2s linear infinite;
 
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 10px;
-        height: 4px;
-        background-color: tomato;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 10px;
+    height: 4px;
+    background-color: tomato;
+  }
 }

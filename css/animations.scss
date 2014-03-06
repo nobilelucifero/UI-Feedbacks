@@ -19,3 +19,16 @@
     -webkit-transform: rotateZ(360deg);
   }
 }
+
+.FXBounce {
+  pointer-events: none;
+  -webkit-animation: FXBounce 0.25s ease;
+          animation: FXBounce 0.25s ease;
+}
+
+@-webkit-keyframes FXBounce {
+  50% { -webkit-transform: scale3d(0.75, 0.75, 0.75) }
+}
+@keyframes FXBounce {
+  50% { transform: scale3d(0.75, 0.75, 0.75) }
+}
