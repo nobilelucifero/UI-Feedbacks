@@ -1,5 +1,11 @@
-$white: #ffffff;
-$black: #000000;
+$brand-color: #2d9fc5;
+
+$textCopy: #333;
+$textLink: $brand-color;
+
+$white: #fff;
+$black: #000;
 $turquoise: #17c3e5; // 5ccfe5
+$lightTurquoise: lighten($turquoise, 5%); // 5ccfe5
 $darkTurquoise: darken($turquoise, 5%); // 5ccfe5
 $spaceGrey: #738292;
