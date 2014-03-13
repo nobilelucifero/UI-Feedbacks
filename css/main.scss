@@ -16,7 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-      box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -63,6 +63,10 @@ h4 {
 h4, p {
   font-size: 18px;
   font-size: 1.125rem;
+}
+
+.js-feedback:focus {
+  outline: 0;
 }
 
 .wrapper {
@@ -152,37 +156,6 @@ h4, p {
   height: 1.875rem;
   border-radius: 100%;
   box-shadow: 0 0 0 4px rgba($brand-color, 0);
-
-  // &:after {
-  //   content: '\203A';
-  //   // content: '🐙';
-  //   display: inline-block;
-  //   text-align: center;
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   line-height: 1.75rem;
-  //   font-weight: 500;
-  //   color: $white;
-  //   background-color: $brand-color;
-  //   opacity: 0;
-  //   border-radius: inherit;
-  //   -webkit-transition: all .25s;
-  //           transition: all .25s;
-  //   // -webkit-transform: scale3d(0.5, 0.5, 0.5);
-  //   //         transform: scale3d(0.5, 0.5, 0.5);
-  // }
-  // .author-badge:hover &:after {
-  //   opacity: 1;
-  //   // -webkit-transform: scale3d(1, 1, 1);
-  //           // transform: scale3d(1, 1, 1);
-  // }
-  .author-badge:hover & {
-    box-shadow: 0 0 0 2px rgba($brand-color, 0.10);
-    box-shadow: 0 0 0 2px $white, 0 0 0 3px #333;
-  }
 }
 .author-avatar--media {
   display: block;
@@ -199,9 +172,12 @@ h4, p {
 
 .author-sreenname {
   font-weight: 500;
+  border: 1px dotted $textCopyInv;
+  -webkit-transition: all .1s;
+          transition: all .1s;
 
   .author-badge:hover & {
-    border-bottom: 1px dotted;
+    border-bottom: 1px dotted $textCopy;
   }
 }
 .btn-source {
@@ -211,10 +187,9 @@ h4, p {
   line-height: 1.8125rem;
   padding: 0 0.75rem 0.0625rem;
   font-size: 0.875rem;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   border-radius: 17px;
-    font-weight: 400;
-
+  font-weight: 500;
   -webkit-transition: all .1s;
           transition: all .1s;
 
@@ -226,12 +201,12 @@ h4, p {
     margin-left: 0.5em;
   }
   &:hover:after {
-    -webkit-animation: FXFlashSmall 0.5s 0.2s;
-            animation: FXFlashSmall 0.5s 0.2s;
+    -webkit-animation: FXFlashSmall 0.5s 0.25s;
+            animation: FXFlashSmall 0.5s 0.25s;
   }
   &:hover {
-    border-color: #ccc;
-    color: darken($brand-color, 10%);
+    border-color: #ddd;
+    color: $brand-color;
   }
 }
 
@@ -382,13 +357,14 @@ h4, p {
           transform: translateY(-12.5%);
 }
 .appbar-item-overlay.is--active {
+  z-index: 1;
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 .appbar-item-overlay.is--active + .appbar-item-content {
   z-index: 1;
-  opacity: 0.25;
+  opacity: 0.35;
   -webkit-transition: opacity 0.25s;
           transition: opacity 0.25s;
 }
@@ -512,33 +488,33 @@ h4, p {
   height: 100%;
   border-radius: 100%;
   background-color: rgba($black, 0.50);
-  -webkit-animation: FXLoader 2.5s infinite;
-          animation: FXLoader 2.5s infinite;
+  -webkit-animation: FXLoader 4s infinite;
+          animation: FXLoader 4s infinite;
 }
 
 .loader .frame-01 {
   top: -0.5rem;
   left: -0.5rem;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 .loader .frame-02 {
   top: -0.5rem;
   right: -0.5rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .loader .frame-03 {
   bottom: -0.5rem;
   right: -0.5rem;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .loader .frame-04 {
   bottom: -0.5rem;
   left: -0.5rem;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .spinner {

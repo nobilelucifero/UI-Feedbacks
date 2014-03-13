@@ -1,21 +1,31 @@
-// animate.scss
-// @import "libs/animate.scss";
-
+// FXFlashSmall animation
 @-webkit-keyframes FXFlashSmall {
   50% {
     opacity: 0.1;
   }
 }
+@keyframes FXFlashSmall {
+  50% {
+    opacity: 0.1;
+  }
+}
 
+// FXRotate animation
 @-webkit-keyframes FXRotate {
   100% {
     -webkit-transform: rotateZ(359deg);
   }
 }
+@keyframes FXRotate {
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
 
+
+// FXLoader animation
 @-webkit-keyframes FXLoader {
   0% {
-    // border-radius: 100%;
     border-radius: 25%;
   }
   50% {
@@ -23,22 +33,28 @@
   }
   100% {
       opacity: 0.5;
-    // -webkit-transform: rotateZ(359deg);
+  }
+}
+@keyframes FXLoader {
+  0% {
+    border-radius: 25%;
+  }
+  50% {
+      transform: rotateZ(44deg);
+  }
+  100% {
+      opacity: 0.5;
   }
 }
 
-.appbar-item,
-.appbar-item-overlay {
-  -webkit-perspective: 500px; /* Chrome, Safari, Opera */
-  perspective: 500px;
-}
-
+// FXBounce triggering class
 .FXBounce {
   pointer-events: none;
   -webkit-animation: FXBounce 0.25s;
           animation: FXBounce 0.25s;
 }
 
+// FXBounce animation
 @-webkit-keyframes FXBounce {
   50% { -webkit-transform: scale3d(0.75, 0.75, 0.75) }
 }
