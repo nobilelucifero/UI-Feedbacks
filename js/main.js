@@ -22,31 +22,46 @@ var buttons        = document.querySelectorAll('.js-feedback');
 var buttonFX       = 'FXBounce';
 var buttonSTIdle   = 'STIdle';
 var buttonFeedback = 'is--active';
+
 // applyFX: handles the CSS animation
 var applyFX        = function(el) {
   el.classList.add(buttonFX);
-  el.addEventListener(ANIMATIONEND, function() {
+  console.log('FX::APPLY', el.className);
+  el.addEventListener(ANIMATIONEND, function () {
     removeFX(el);
-    if(el.classList.contains('is--toggle')) {
-      leaveFX(el);
-    }
   });
+  if (el.classList.contains('is--toggle')) {
+    leaveFX(el);
+  }
+  if (el.classList.contains('has--queue')) {
+    leaveFX(el);
+  }
 }
 // removeFX: removes CSS animation after applyFX
 var removeFX       = function (el) {
   el.classList.remove(buttonFX);
+  console.log('FX::REMOVE', el.className);
 };
+
 // leaveFX: apply possible feedback after applyFX
 var leaveFX        = function (el) {
-  el.classList.add(buttonFeedback);
+	var prevEl = el.previousSibling.previousElementSibling;
+  el.classList.toggle(buttonFeedback);
+  if (prevEl) {
+  	prevEl.classList.toggle(buttonFeedback);
+  }
+  console.log('FX::LEAVE', el.className);
 };
 
 for (var i = 0, n = buttons.length; i < n; i++) {
   var el = buttons[i];
 
   el.addEventListener('click', function(e) {
+  	var trueHref = this.href.match(/#/);
     applyFX(this);
-		e.preventDefault();
+    if (trueHref) {
+			e.preventDefault();
+		}
   }, false);
 }
 

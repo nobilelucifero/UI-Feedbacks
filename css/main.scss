@@ -182,23 +182,20 @@ h4, p {
   line-height: 1.75rem;
   line-height: 1.8125rem;
   padding: 0 0.75rem 0.0625rem;
-  // padding: 0 0.75rem;
   font-size: 0.875rem;
-  // font-weight: 500;
   border: 1px solid #aaa;
   border-radius: 17px;
 
   transition: all .1s;
 
   &:after {
-    // content: '\203A';
-    // display: inline-block;
-    // position: relative;
-    // top: -0.0625rem;
-    // margin-left: 0.5em;
+    content: '\203A';
+    display: inline-block;
+    position: relative;
+    top: -0.0625rem;
+    margin-left: 0.5em;
   }
   &:hover:after {
-    // content: '»';
     -webkit-animation: FXFlashSmall 0.5s 0.2s;
   }
   &:hover {
@@ -237,71 +234,185 @@ h4, p {
   @extend %toolbar;
   margin: 0rem 0 1.5rem;
 }
+.appbar--miniapp {
+  display: inline-block;
+  padding-top: 0.375rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 rgba($black, 0.15);
+
+  .appbar-item-divider {
+    background-color: rgba($black, 0.25);
+  }
+}
 .appbar-group {
   @extend %toolbar-group;
 }
 .appbar-group--center {
   @extend %toolbar-group--center;
 }
-.appbar-item {
+.appbar-item,
+.appbar-item-divider {
   @extend %toolbar-item;
   position: relative;
   margin: 0 0.25rem;
 }
+.appbar-item-divider {
+  background-color: rgba($white, 0.5);
+  width: 1px;
+  margin: 0.375rem 0.25rem;
+  height: 1.75rem;
+}
 .appbar-item-content {
   @extend %toolbar-item-content;
-  // display: table;
-  width: 2.5rem;
+  display: inline-block;
+  min-width: 2.5rem;
   height: 2.5rem;
   line-height: 2.25rem;
+
+  &.has--label-inline {
+    padding: 0 0.5625rem;
+  }
 }
 .appbar-item-icon {
   display: inline-block;
-  // display: table-cell;
   vertical-align: middle;
   width: 1.375rem;
   height: 1.375rem;
   line-height: 1.375rem;
 }
+.appbar-item-label {
+  position: relative;
+  display: block;
+  width: 2.5rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: all .25s;
 
-// .appbar--hovers .appbar-group:hover .appbar-item:not(:hover) {
-//   opacity: 0.5;
-// }
-.appbar--hovers .appbar-item {
-  transition: all .5s ease-out;
+  .appbar--hovers-two .appbar-item:hover & {
+    opacity: 1;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
 }
-.appbar--hovers .appbar-item:hover {
-  // -webkit-transform: scale3d(1.5, 1.5, 1.5);
-  // transform: scale3d(1.5, 1.5, 1.5);
-  // -webkit-transform: translateY(-20%) scale(1.5);
-  // transform: translateY(-5%) scale(1.5);
-  -webkit-transform: scale(1.5);
-  // box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
-  // box-shadow: 0 0 0 1px $white;
-  transition: all .1s;
+.appbar-item-label--inline {
+  display: inline-block;
+  line-height: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-left: 0.25rem;
 }
+
+.appbar--hovers-one .appbar-item {
+  -webkit-transition: all .5s ease-out;
+          transition: all .5s ease-out;
+}
+.appbar--hovers-one .appbar-item:hover {
+  -webkit-transform: scale3d(1.5, 1.5, 1.5);
+          transform: scale3d(1.5, 1.5, 1.5);
+  -webkit-transition: all .1s;
+          transition: all .1s;
+}
+.appbar--hovers-two .appbar-item {
+  transition: all .25s ease-out;
+}
+.appbar--hovers-two .appbar-item:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
 .appbar-item-overlay {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: 0;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
 }
 .appbar-item-overlay.is--active + .appbar-item-content {
-  // transform: scale(0.5);
-  // -webkit-transform: scale(0.5) translateY(20px);
-  // -webkit-filter: blur(2px);
+  z-index: 1;
   opacity: 0.25;
-  // background-color: tomato;
 }
-.is--toggle {
-  transition: all .1s;
+.toggle--theme-one {
+  transition: all 0.25s;
   &.is--active {
     background-color: rgba($black, 0.25);
     border-radius: 4px;
+    transition-delay: 0.125s;
   }
 }
+
+// love icon
+.toggle--theme-two .heart-outline {
+  fill: #333333;
+  opacity: 1;
+  -webkit-transition: all 0.25s 0.25s, fill 0.125s;
+          transition: all 0.25s 0.25s, fill 0.125s;
+}
+.toggle--theme-two:hover .heart-outline {
+  fill: #e9395f;
+}
+.toggle--theme-two.is--active .heart-outline {
+  opacity: 0;
+}
+.toggle--theme-two .heart-full {
+  fill: #e9395f;
+  opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+          transform: scale3d(0.5, 0.5, 0.5);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: all 0.25s 0.25s;
+          transition: all 0.25s 0.25s;
+}
+.toggle--theme-two.is--active .heart-full {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.button-like path,
+.button-dislike path {
+  -webkit-transition: fill 0.125s;
+          transition: fill 0.125s;
+}
+.button-like .appbar-item-icon,
+.button-dislike .appbar-item-icon {
+  -webkit-transition: all 0.125s;
+          transition: all 0.125s;
+}
+
+// like icon
+.button-like .like-outline {
+  fill: #333333;
+}
+.button-like:hover .appbar-item-icon {
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+.button-like:hover .like-outline,
+.button-like.is--active .like-outline {
+  fill: #7eaa04;
+}
+
+
+// dislike icon
+.button-dislike .dislike-outline {
+  fill: #333333;
+}
+.button-dislike:hover .appbar-item-icon {
+  -webkit-transform: rotateZ(-10deg);
+          transform: rotateZ(-10deg);
+}
+.button-dislike:hover .dislike-outline,
+.button-dislike.is--active .dislike-outline {
+  fill: #aa0420;
+}
+
 
 .progessbar {
   display: inline-block;
@@ -321,6 +432,59 @@ h4, p {
   height: 100%;
   background-color: rgba($black, 0.5);
   // background-color: rgba($white, 1);
+
+
+  -webkit-animation: FXProgress 1s ease-out forwards;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  top: -0.125rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  line-height: 0.5rem;
+  // border: 1px solid rgba($black, 0.50);
+  border-radius: 100%;
+  // overflow: hidden;
+}
+.loader .frame-01,
+.loader .frame-02,
+.loader .frame-03,
+.loader .frame-04 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  // background-color: inherit;
+  background-color: rgba($black, 0.50);
+  -webkit-animation: FXLoader 2.5s infinite;
+}
+
+.loader .frame-01 {
+  top: -0.5rem;
+  left: -0.5rem;
+  // background-color: tomato;
+  -webkit-animation-delay: 2s;
+}
+.loader .frame-02 {
+  top: -0.5rem;
+  right: -0.5rem;
+  // background-color: green;
+  -webkit-animation-delay: 0.5s;
+}
+.loader .frame-03 {
+  bottom: -0.5rem;
+  right: -0.5rem;
+  // background-color: orange;
+  -webkit-animation-delay: 1s;
+}
+.loader .frame-04 {
+  bottom: -0.5rem;
+  left: -0.5rem;
+  -webkit-animation-delay: 1.5s;
+  // background-color: blue;
 }
 
 .spinner {
@@ -331,11 +495,10 @@ h4, p {
   width: 1.25rem;
   height: 1.25rem;
   line-height: 1.125rem;
-  // background-color: rgba($black, 0.50);
   border: 1px solid rgba($black, 0.50);
   border-radius: 0.625rem;
   overflow: hidden;
-  // -webkit-animation: FXRotate 2s linear infinite;
+  -webkit-animation: FXRotate 2s linear infinite;
 
   &:after {
     content: '';
@@ -344,7 +507,7 @@ h4, p {
     left: 0;
     display: block;
     width: 10px;
-    height: 4px;
-    background-color: tomato;
+    height: 10px;
+    background-color: rgba($black, 0.50);
   }
 }

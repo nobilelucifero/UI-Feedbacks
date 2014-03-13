@@ -1,5 +1,5 @@
 // animate.scss
-@import "libs/animate.scss";
+// @import "libs/animate.scss";
 
 @-webkit-keyframes FXFlashSmall {
   50% {
@@ -8,22 +8,35 @@
 }
 
 @-webkit-keyframes FXRotate {
-  0%, 100% {
-    // -webkit-transform: rotateZ(0deg);
-    border-radius: 100%;
+  100% {
+    -webkit-transform: rotateZ(359deg);
+  }
+}
+
+@-webkit-keyframes FXLoader {
+  0% {
+    // border-radius: 100%;
+    border-radius: 25%;
   }
   50% {
-    border-radius: 0;
+      -webkit-transform: rotateZ(44deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
+      opacity: 0.5;
+    // -webkit-transform: rotateZ(359deg);
   }
+}
+
+.appbar-item,
+.appbar-item-overlay {
+  -webkit-perspective: 500px; /* Chrome, Safari, Opera */
+  perspective: 500px;
 }
 
 .FXBounce {
   pointer-events: none;
-  -webkit-animation: FXBounce 0.25s ease;
-          animation: FXBounce 0.25s ease;
+  -webkit-animation: FXBounce 0.25s;
+          animation: FXBounce 0.25s;
 }
 
 @-webkit-keyframes FXBounce {
@@ -32,3 +45,13 @@
 @keyframes FXBounce {
   50% { transform: scale3d(0.75, 0.75, 0.75) }
 }
+
+@-webkit-keyframes FXProgress {
+  0% { width: 0% }
+  100% { width: 100% }
+}
+@keyframes FXProgress {
+  0% { width: 0% }
+  100% { width: 100% }
+}
+
