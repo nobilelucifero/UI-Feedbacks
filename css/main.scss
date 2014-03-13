@@ -264,17 +264,9 @@ h4, p {
 .appbar-item,
 .appbar-item-divider {
   @extend %toolbar-item;
-  // display: inline-block;
-  // width: 20%;
   position: relative;
   margin: 0 0.25rem;
-
-  @media only screen and (max-width: 360px) {
-    &:nth-child(5n) {
-      // clear: both;
-      // margin-left: 1.25rem;
-    }
-  }
+  white-space: nowrap;
 }
 .appbar-item-divider {
   background-color: rgba($white, 0.5);
