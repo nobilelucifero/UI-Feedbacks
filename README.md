@@ -8,6 +8,8 @@ A bunch of feedback ideas for your buttons. This demo does not rely on any parti
 
 ---
 
+**Note:** more is coming! Suggestions are welcomed!
+
 ## Known issues
 * Tested just on Chrome 33, Firefox 27, Safari 7
 * Firefox seems to have some problems in transitioning paths inside inline SVGs. I'm playing around the code to make it work better. Plus, I get some artifacts in the rendering. I fear I won't be able to fix them.
