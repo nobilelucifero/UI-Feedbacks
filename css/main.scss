@@ -25,7 +25,7 @@ body {
   color: $textCopy;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: 300;
 }
 
@@ -37,7 +37,7 @@ a {
   }
 }
 
-h1, h3 {
+h1 {
   margin-bottom: 0;
   color: $brand-color;
 }
@@ -53,6 +53,7 @@ h2 {
 }
 
 h3 {
+  margin-top: 0;
   font-size: 1.5rem;
 }
 
@@ -98,14 +99,13 @@ h4, p {
   //   width: 50%;
   // }
 
-  &, & h1, & h2, & p {
+  &, & h1, & h2, & h3, & p {
     color: $white;
   }
 }
 .section:nth-child(even) {
   background-color: $darkTurquoise;
 }
-
 .menu {
   @extend %toolbar;
   position: relative;
@@ -207,6 +207,14 @@ h4, p {
   &:hover {
     border-color: #ddd;
     color: $brand-color;
+  }
+}
+.btn-source--footer {
+  margin-top: 0.5rem;
+  border-color: rgba($white, 0.50);
+  &:hover {
+    color: $white;
+    border-color: rgba($white, 1);
   }
 }
 
