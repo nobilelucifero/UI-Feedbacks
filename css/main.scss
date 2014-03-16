@@ -208,11 +208,11 @@ h4, p {
     top: -0.0625rem;
     margin-left: 0.5em;
   }
-  &:hover:after {
+  .no-touch &:hover:after {
     -webkit-animation: FXFlashSmall 0.5s 0.25s;
             animation: FXFlashSmall 0.5s 0.25s;
   }
-  &:hover {
+  .no-touch &:hover {
     border-color: #ddd;
     color: $brand-color;
   }
@@ -221,7 +221,7 @@ h4, p {
   margin-top: 0.5rem;
   border-color: rgba($white, 0.50);
 
-  &:hover {
+  .no-touch &:hover {
     color: $white;
     border-color: rgba($white, 1);
   }
@@ -320,7 +320,7 @@ h4, p {
   opacity: 0;
   transition: all .25s;
 
-  .appbar--hovers-two .appbar-item:hover & {
+  .no-touch .appbar--hovers-two .appbar-item:hover & {
     opacity: 1;
     -webkit-transform: translateY(-10%);
             transform: translateY(-10%);
@@ -338,7 +338,7 @@ h4, p {
   -webkit-transition: all .5s ease-out;
           transition: all .5s ease-out;
 }
-.appbar--hovers-one .appbar-item:hover {
+.no-touch .appbar--hovers-one .appbar-item:hover {
   -webkit-transform: scale3d(1.5, 1.5, 1.5);
           transform: scale3d(1.5, 1.5, 1.5);
   -webkit-transition: all .1s;
@@ -347,7 +347,7 @@ h4, p {
 .appbar--hovers-two .appbar-item {
   transition: all .25s ease-out;
 }
-.appbar--hovers-two .appbar-item:hover {
+.no-touch .appbar--hovers-two .appbar-item:hover {
   -webkit-transform: translateY(-10%);
           transform: translateY(-10%);
 }
@@ -393,7 +393,7 @@ h4, p {
   -webkit-transition: all 0.25s 0.25s, fill 0.125s;
           transition: all 0.25s 0.25s, fill 0.125s;
 }
-.toggle--theme-two:hover .heart-outline {
+.no-touch .toggle--theme-two:hover .heart-outline {
   fill: #e9395f;
 }
 .toggle--theme-two.is--active .heart-outline {
@@ -430,11 +430,11 @@ h4, p {
 .button-like .like-outline {
   fill: $textCopy;
 }
-.button-like:hover .appbar-item-icon {
+.no-touch .button-like:hover .appbar-item-icon {
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
 }
-.button-like:hover .like-outline,
+.no-touch .button-like:hover .like-outline,
 .button-like.is--active .like-outline {
   fill: #7eaa04;
 }
@@ -444,11 +444,11 @@ h4, p {
 .button-dislike .dislike-outline {
   fill: $textCopy;
 }
-.button-dislike:hover .appbar-item-icon {
+.no-touch .button-dislike:hover .appbar-item-icon {
   -webkit-transform: rotateZ(-10deg);
           transform: rotateZ(-10deg);
 }
-.button-dislike:hover .dislike-outline,
+.no-touch .button-dislike:hover .dislike-outline,
 .button-dislike.is--active .dislike-outline {
   fill: #aa0420;
 }
