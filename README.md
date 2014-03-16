@@ -11,7 +11,7 @@ A bunch of feedback ideas for your buttons. This demo does not rely on any parti
 **Note:** more is coming! Suggestions are welcomed!
 
 ## Known issues
-* Tested just on Chrome 33, Firefox 27, Safari 7
+* Tested just on Chrome 33, Firefox 27, Safari 7, Chrome for Android and Safari 7 Mobile.
 * Firefox seems to have some problems in transitioning paths inside inline SVGs. I'm playing around the code to make it work better. Plus, I get some artifacts in the rendering. I fear I won't be able to fix them.
 * `previousElementSibling` is not supported by Safari. That's why the last section doesn't work. More infos here: [ChildNode.previousElementSibling](https://developer.mozilla.org/en-US/docs/Web/API/Childnode.previousElementSibling). Going to fix it as soon as possible!
-* On touch devices (I could test just Chrome on Android), these feedbacks tend to remain in a "focused" state. I'm investigating on this, but shouldn't be a big problem.
+* ~~On touch devices (I could test just Chrome on Android), these feedbacks tend to remain in a "focused" state. I'm investigating on this, but shouldn't be a big problem.~~ **Update**: this should be fixed now.
