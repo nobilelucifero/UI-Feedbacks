@@ -15,9 +15,9 @@ A bunch of feedback ideas for your buttons. This demo does not rely on any parti
 
 I still didn't have the chance to test it on IE* nor IE* Mobile or older versions of Safari. I tested Chrome for Android and Safari Mobile (on the iOS Simulator). Both seems to work fine.
 
-| Chrome | Firefox | IE   | Safari |
-|:-------|:--------|:-----|:-------|
-| 33     | 27      | 9-10 | 7      |
+| Chrome | Firefox | IE       | Safari |
+|:-------|:--------|:---------|:-------|
+| 33     | 27      | 9-11 (?) | 7      |
 
 
 ## Known issues
