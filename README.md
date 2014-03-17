@@ -1,6 +1,6 @@
 # UI Feedbacks
 
-A bunch of feedback ideas for your buttons. This demo does not rely on any particular coding technique, instead it just serves just as an inspiration to give your interfaces some more dynamism. I hope you'll enjoy it!
+A bunch of feedback ideas for your buttons. This demo does not rely on any particular coding technique, instead it just serves as an inspiration to give your interfaces some more dynamism. I hope you'll enjoy it!
 
 ---
 
