@@ -1,5 +1,5 @@
 // wait for onload
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
 
   'use strict';
 
