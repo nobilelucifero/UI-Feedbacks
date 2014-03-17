@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var applyFX = function(el) {
     el.classList.add(buttonFX);
 
-    console.log('FX::APPLY', el.className);
+    console.debug('FX::APPLY', el);
 
     el.addEventListener(ANIMATIONEND, function () {
       removeFX(el);
@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var removeFX = function (el) {
     el.classList.remove(buttonFX);
 
-    console.log('FX::REMOVE', el.className);
+    console.debug('FX::REMOVE', el);
   };
 
   // leaveFX: apply possible feedback after applyFX
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", function () {
       prevEl.classList.toggle(buttonFeedback);
     }
 
-    console.log('FX::LEAVE', el.className);
+    console.debug('FX::LEAVE', el);
   };
 
   // cycle through buttons elements
