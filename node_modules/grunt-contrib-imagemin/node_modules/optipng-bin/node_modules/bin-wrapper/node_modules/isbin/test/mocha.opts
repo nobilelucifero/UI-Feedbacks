@@ -1,4 +1,0 @@
---require should
---bail
---ui bdd
---slow 100
